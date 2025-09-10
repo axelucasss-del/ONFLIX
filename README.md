@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OnFlix - Streaming</title>
+  <style>
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: #0b0b0b;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      background: linear-gradient(180deg, #3a0404 0%, #0b0b0b 100%);
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 4rem;
+      font-weight: 900;
+      margin: 0;
+    }
+
+    .hero {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    .hero img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 20px #90000085;
+    }
+
+    .hero p {
+      font-size: 1.6rem;
+      margin: 1.5rem 0 2rem 0;
+      font-weight: 600;
+    }
+
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      background-color: #25d366;
+      color: white;
+      font-weight: 700;
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 1.3rem;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 6px #1eaa52;
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #1daa58;
+      box-shadow: 0 3px #176f3e;
+    }
+
+    /* Ícone whatsapp inline SVG */
+    .btn-whatsapp svg {
+      width: 24px;
+      height: 24px;
+      fill: white;
+    }
+
+    section.qualidade {
+      background-color: #120a03;
+      margin: 3rem auto;
+      max-width: 900px;
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    section.qualidade img {
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px #b8860b;
+    }
+
+    section.qualidade .text {
+      color: #b8860b;
+      font-size: 2.2rem;
+      font-weight: 700;
+      max-width: 500px;
+      line-height: 1.3;
+    }
+
+    section.planos {
+      max-width: 960px;
+      margin: 3rem auto;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    section.planos img {
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #f3722c80;
+      margin-bottom: 2rem;
+    }
+
+    .planos-container {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .plano {
+      background: linear-gradient(135deg,#00a1ff,#004499);
+      color: white;
+      padding: 1.5rem 2rem;
+      border-radius: 12px;
+      flex: 1 1 200px;
+      max-width: 220px;
+      box-shadow: 0 4px 10px rgb(0 64 128 / 0.7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-weight: 700;
+    }
+
+    .plano.mensal {
+      background: #1abc9c;
+    }
+    .plano.trimestral {
+      background: #34495e;
+    }
+    .plano.semestral {
+      background: #f39c12;
+      color: #000;
+    }
+
+    .plano h3 {
+      margin: 0 0 1rem 0;
+      font-size: 1.3rem;
+    }
+
+    .plano .valor {
+      font-size: 2.8rem;
+      margin-bottom: 0.3rem;
+      line-height: 1;
+    }
+
+    .plano .periodo {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .plano .info {
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    footer {
+      margin: 4rem 0 2rem 0;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      section.qualidade {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      section.qualidade .text {
+        max-width: 100%;
+      }
+
+      .planos-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .plano {
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>OnFlix</h1>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Apresentação do serviço OnFlix">
+      <p>Assista mais de 3.000 canais ao vivo e mais de 70.000 conteúdos de séries e filmes.</p>
+      <a href="https://wa.me/5582988429041" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" aria-label="Chamar OnFlix no WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20.52 3.48A11.92 11.92 0 0012 0C5.373 0 0 5.373 0 12a11.82 11.82 0 001.645 6.136L0 24l5.952-1.56A11.854 11.854 0 0012 24c6.627 0 12-5.373 12-12 0-3.195-1.25-6.198-3.48-8.52zM12 21.59a9.581 9.581 0 01-5.191-1.477l-.372-.22-3.53.925.943-3.44-.242-.366A9.63 9.63 0 012.4 12c0-5.365 4.36-9.726 9.7-9.726 2.585 0 5.011 1.005 6.843 2.83a9.62 9.62 0 012.836 6.855c-.003 5.363-4.36 9.721-9.757 9.721zm5.466-7.174c-.296-.147-1.753-.865-2.025-.965-.27-.1-.466-.147-.664.149-.198.296-.764.965-.937 1.164-.173.198-.347.223-.643.074-.296-.147-1.248-.46-2.38-1.475-.88-.784-1.474-1.752-1.647-2.048-.173-.296-.018-.456.13-.602.134-.133.298-.347.446-.52.15-.174.2-.298.3-.496.1-.198.05-.372-.025-.52-.074-.147-.664-1.602-.91-2.186-.238-.574-.48-.498-.664-.507l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.02-1.04 2.483 1.065 2.878 1.213 3.074c.148.198 2.095 3.2 5.073 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.872.118.57-.085 1.753-.715 2-1.406.248-.69.248-1.28.173-1.406-.074-.126-.27-.198-.567-.346z"/>
+        </svg>
+        Chamar no WhatsApp
+      </a>
+    </section>
+
+    <section class="qualidade" aria-label="Qualidade do serviço">
+      <img src="https://i.imgur.com/oLwvm2h.jpeg" alt="Logo OnFlix com fundo de cadeiras vermelhas em cinema" />
+      
+    </section>
+
+    <section class="planos" aria-label="Planos e preços OnFlix">
+      <img src="c:\Users\PC DELL\Downloads\Gemini_Generated_Image_pch4ynpch4ynpch4.png" alt="Mulher sorridente assistindo TV com descrição dos dispositivos compatíveis e planos" />
+      <div class="planos-container">
+        <div class="plano mensal" aria-label="Plano mensal OnFlix">
+          <h3>Plano mensal</h3>
+          <div class="valor">R$ 29,99</div>
+          <div class="periodo">por mês</div>
+          <div class="info">Mais de 3.000 canais</div>
+        </div>
+        <div class="plano trimestral" aria-label="Plano trimestral OnFlix">
+          <h3>Plano trimestral</h3>
+          <div class="valor">R$ 79,99</div>
+          <div class="periodo">a cada 3 meses</div>
+          <div class="info">Mais de 3.000 canais</div>
+        </div>
+        <div class="plano semestral" aria-label="Plano semestral OnFlix">
+          <h3>Plano semestral</h3>
+          <div class="valor">R$ 149,99</div>
+          <div class="periodo">a cada 6 meses</div>
+          <div class="info">Mais de 3.000 canais</div>
+        </div>
+      </div>
+      <p style="margin-top: 1.5rem; font-weight: 600;">Entre em contato e solicite seu teste grátis.</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2024 OnFlix - Todos os direitos reservados.
+  </footer>
+</body>
+</html>
